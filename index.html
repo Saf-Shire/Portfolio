@@ -117,7 +117,8 @@
                             <a href="https://github.com/Saf-Shire/black-codher-react-bookcase" target="_blank"><i
                                     class="fab fa-github"></i><span>Code</span></a>
                         </div>
-                        <p class="desc">An interactive book search app using the google API. A chosen book can also be favourited or removed from a bookcase. </p>
+                        <p class="desc">An interactive book search app using the google API. A chosen book can also be
+                            favourited or removed from a bookcase. </p>
                         <p>Technologies used</p>
                         <ul class="technologies">
                             <li><i class="fas fa-dot-circle"></i>
@@ -144,11 +145,14 @@
                             <img src="images/lyricalquiz.png" alt="Project thumbnail" />
                         </div>
                         <div class="project-links">
-                            <a href="https://lyricalquiz.netlify.app/" target="_blank"><i class="fas fa-desktop"></i><span>Demo</span></a>
-                            <a href="https://github.com/Saf-Shire/black-codher-Js-quiz"><i class="fab fa-github" target="_blank"></i><span>Code</span></a>
+                            <a href="https://lyricalquiz.netlify.app/" target="_blank"><i
+                                    class="fas fa-desktop"></i><span>Demo</span></a>
+                            <a href="https://github.com/Saf-Shire/black-codher-Js-quiz"><i class="fab fa-github"
+                                    target="_blank"></i><span>Code</span></a>
                         </div>
 
-                        <p class="desc">A Javascript quiz application that is music themed. Out of a few selected options the user can guess the missing word of a song lyric.</p>
+                        <p class="desc">A Javascript quiz application that is music themed. Out of a few selected
+                            options the user can guess the missing word of a song lyric.</p>
 
                         <p>Technologies Used</p>
                         <ul class="technologies">
@@ -210,24 +214,26 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#contact" method="POST" data-netlify="true">
+                    <form name="gform" id="gform" enctype="text/plain"
+                        action="https://docs.google.com/forms/d/e/1FAIpQLSeCgDL2JuApFyzAf02VxcytoCYZpHP89NwClcIY-LAG6jQeuA/viewform?usp=pp_url">
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" name="entry.1416019248" id="entry.1416019248" placeholder="Name">
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" name="entry.1084360805" id="entry.1084360805" placeholder="Email">
                             </div>
                         </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" name="entry.1549031796" id="entry.1549031796"
+                                placeholder="Message.."></textarea>
                         </div>
                         <div class="button">
                             <button type="submit">Send message</button>
                         </div>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                            onload="if(submitted) {}"></iframe>
+
                     </form>
                 </div>
             </div>
@@ -240,6 +246,18 @@
 
 
     <script src="main.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript">var submitted = false;</script>
+    <script type="text/javascript">
+        $('#gform').on('submit', function (e) {
+            $('#gform *').fadeOut(2000);
+            $('#gform').prepend('Thanks! Your response has been sent.');
+        });
+
+        $('#fn').on('submit', function (e) {
+            $('#fn*').fadeOut(2000);
+        });
+    </script>
 </body>
 
 </html>
