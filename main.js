@@ -6,7 +6,7 @@ $(document).ready(function(){
         }else{
             $('.navbar').removeClass("sticky");
         }
-        
+
         // scroll-up button show/hide script
         if(this.scrollY > 500){
             $('.scroll-up-btn').addClass("show");
@@ -35,14 +35,14 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Safia Shire"],
-        typeSpeed: 240,
-        backSpeed: 120,
+        strings: ["Safia Shire","Safia Shire"],
+        typeSpeed: 100,
+        backSpeed: 60,
         loop: true
     });
 
     var typed = new Typed(".typing-2", {
-        strings: ["HTML5", "CSS3","Javascript", "React JS","Node JS", "MongoDB","SQL"],
+        strings: ["HTML5", "CSS3","Javascript","React JS","Ionic","Node JS", "MongoDB","SQL"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
